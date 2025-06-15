@@ -9,26 +9,57 @@
   height: 100vh;
 }
 
-.inscritos {
+.inscritosContainer {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  padding-top: 1%;
-  flex: 0.8;
-  /* gap: 8%; */
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  padding: 10px;
+}
+.inscritosHeader {
+  /* border: 1px solid #cecec3; */
+  padding-top: 10px;
+}
+.inscritoContainer  {
+  /* border-left: 1px solid #cecece; */
+  
+  border-radius: 8px;
+  border: 1px solid #cecece;
+  padding: 0px 0px 0px 10px;
+}
+
+.inscritoContainer p:first-of-type {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 1.4em;
+  color: #fef3fe;
+}
+
+.inscritos {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  flex: 0.5;
+  gap: 8%;
+  padding: 0 10px 0px 10px;
   background: #83499f;
+  overflow-y: scroll;
+  scrollbar-width: 10px;
 }
 
 .inscritos h1 {
   color: #fff;
 }
 
-.inscritos p {
+/* .inscritos p {
   padding-top: 20px;
   text-align: center;
   color: #fff;
-  font-size: 22px;
-}
+  font-size: 17px;
+} */
+
+
 
 .formSection {
   display: flex;

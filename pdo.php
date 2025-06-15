@@ -12,14 +12,14 @@
 
         public function insertPDO($data)
         {
-            $sql = "INSERT INTO usuarios(name, email, telephone) VALUES(:n, :t, :e)";
+            $sql = "INSERT INTO usuarios(name, email, telephone) VALUES(:n, :e, :t)";
             $res= $this->connection->prepare($sql); // passar parametro e depois substituir o query quando nao precisa substituir
             
             //forma de substituicao
             
             $res->bindValue(":n", $data->getName());
-            $res->bindValue(":t", $data->getTel());
             $res->bindValue(":e", $data->getEmail());
+            $res->bindValue(":t", $data->getTel());
 
             $res->execute();
         }

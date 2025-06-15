@@ -2,16 +2,23 @@
 <?php 
     require_once "User.php";
     require_once "pdo.php";
+
+
     $dbEventTech = new dataBaseModel();
-    if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['telephone'])) {
-        if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['telephone'])) {
-            $name = $_POST['name'];
-            $email= $_POST['email'];
-            $telephone = $_POST['telephone'];
-            $inscrito = new User($name, $email, $telephone);
-            $dbEventTech->insertPDO($inscrito);
+    
+    if($_SERVER['REQUEST_METHOD'] == "POST") {
+        if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['telephone'])) {
+            if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['telephone'])) {
+                $name = $_POST['name'];
+                $email= $_POST['email'];
+                $telephone = $_POST['telephone'];
+                $inscrito = new User($name, $email, $telephone);
+                $dbEventTech->insertPDO($inscrito);
+                header("location: index.php");
+            }
         }
     }
+    
 
 
 ?>
@@ -27,22 +34,27 @@
 <body>
     <main class="main_container">
         <div class="inscritos">
-            <h1>Nuday</h1>
-            <h2>Inscritos</h2>
-            <?php 
+            <div class="inscritosHeader">
+                <h1>Nuday</h1>
+            </div>
+
+            <div class="inscritosContainer">
+                <h2 style="color: #fff;">Inscritos</h2>
+                 <?php 
                 foreach($dbEventTech->getInscritos() as $row)
-                {
-                    echo "<h5>{$row['id']}</h5>";
-                    echo "<h5>{$row['name']}</h5>";
-                    echo "<h5>{$row['email']}</h5>";
-                    echo "<h5>{$row['telephone']}</h5>";
+                {   echo "<div class='inscritoContainer'>
+                     <p>{$row['name']}</p>
+                     <p>{$row['email']}</p>
+                     <p>{$row['telephone']}</p>
+                    </div>";
                 }
             ?>
+            </div>
+           
         </div>  
         <section class="formSection">
             <h2>Oportunidade incrível de fazer networking</h2>
             <p>Venha participar, se inscrevendo abaixo</p>
-            
             <form class="forms" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                 <div class="form-inputs_container">
                     <input type="text" name="name" id="name" placeholder="Nome:">
