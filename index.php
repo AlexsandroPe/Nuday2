@@ -1,10 +1,8 @@
 
 <?php 
-    require_once "User.php";
-    require_once "pdo.php";
+   require_once "autoload.php";
 
-
-    $dbEventTech = new dataBaseModel();
+    $dbEventTech = new Database();
     
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['telephone'])) {
@@ -53,8 +51,8 @@
            
         </div>  
         <section class="formSection">
-            <h2>Oportunidade incrível de fazer networking</h2>
-            <p>Venha participar, se inscrevendo abaixo</p>
+            <h2 style="font-size: 40px; justify-self: flex-start; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Oportunidade incrível de fazer networking</h2>
+            <p style="font-size: 22px;">Venha participar, se inscrevendo abaixo</p>
             <form class="forms" action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
                 <div class="form-inputs_container">
                     <input type="text" name="name" id="name" placeholder="Nome:">

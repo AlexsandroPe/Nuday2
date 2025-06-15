@@ -1,5 +1,5 @@
 <?php 
-    class dataBaseModel {
+    class Database {
         private $dsn = "mysql:host=127.0.0.1;dbname=eventTech";
         private $user = "root";
         private $password = "A71BCw!";
@@ -30,6 +30,8 @@
             $res= $this->connection->query($sql);
             return $res;
         }
+
+        public function deleteInscritos(){}
 
     }
 
