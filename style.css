@@ -9,38 +9,34 @@
   height: 100vh;
 }
 
-.inscritosContainer {
+.users_container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 20px;
   border: 1px solid #ccc;
-  /* border-radius: 14px; */
   padding: 10px;
 }
-.inscritosHeader {
-  /* border: 1px solid #cecec3; */
+
+.users_header {
   padding-top: 10px;
 }
-.inscritoContainer  {
-  /* border-left: 1px solid #cecece; */
+
+.user_card {
   border-radius: 8px;
   border: 1px solid #cecece;
   background-color: #a777c0;
   padding: 0px 0px 0px 10px;
 }
 
-.inscritoContainer p {
+.user_card p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- font-size: 1.4em;
+  font-size: 1.4em;
   color: #282828;
-  
 }
 
-.inscritos {
+.users {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   flex: 0.5;
   gap: 8%;
   padding: 0 10px 0px 10px;
@@ -49,20 +45,11 @@
   scrollbar-width: 10px;
 }
 
-.inscritos h1 {
+.users h1 {
   color: #fff;
 }
 
-/* .inscritos p {
-  padding-top: 20px;
-  text-align: center;
-  color: #fff;
-  font-size: 17px;
-} */
-
-
-
-.formSection {
+.form_section {
   display: flex;
   flex-direction: column;
   padding-top: 2%;
@@ -72,26 +59,24 @@
   flex: 1;
   gap: 40px;
   background-color: #f2e8e8;
-  /* border: 1px solid; */
 }
 
-.form-inputs_container {
+.form_inputs_container {
   display: flex;
   flex-direction: column;
   width: 50%;
   gap: 28px;
-  /* border: 1px solid; */
 }
 
-.form-inputs_container input {
+.form_inputs_container input {
   padding: 12px 10px;
   border-radius: 4px;
-  border: 0.5px, solid black;
+  border: 0.5px solid black;
   outline: none;
   height: 54px;
 }
 
-.forms {
+.form {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -105,7 +90,7 @@
   border-radius: 4px;
 }
 
-.forms input[type="submit"] {
+.form input[type="submit"] {
   border: none;
   height: 48px;
   padding: 10px;
