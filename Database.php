@@ -28,9 +28,4 @@ class Database {
         $result = $this->connection->query($sql);
         return $result;
     }
-
-    public function deleteUsers()
-    {
-        // Método ainda não implementado
-    }
 }
