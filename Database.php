@@ -2,7 +2,7 @@
 class Database {
     private $dsn = "mysql:host=127.0.0.1;dbname=eventTech";
     private $user = "root";
-    private $password = "A71BCw!";
+    private $password = "senha!";
     private $connection;
 
     public function __construct() 
