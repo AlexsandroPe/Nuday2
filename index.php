@@ -33,7 +33,7 @@
             <div class="users_container">
                 <h2 style="color: #fff;">Inscritos</h2>
                 <?php 
-                    if (empty($dbEventTech->getUsers())) {
+                  
                         foreach ($dbEventTech->getUsers() as $row)
                         {   echo "<div class='user_card'>
                             <p>{$row['name']}</p>
@@ -41,9 +41,7 @@
                             <p>{$row['telephone']}</p>
                             </div>";
                         }
-                    } else { 
-                        echo "<p>Nenhum inscrito até o momento...</p>";
-                    }
+
                 ?>
             </div>
         </div>  
